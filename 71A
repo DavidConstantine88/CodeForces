@@ -1,0 +1,32 @@
+https://codeforces.com/problemset/problem/71/A
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    int count;
+    cin >> count;
+    vector<string> vec;
+    while (count--)
+    {
+        string tmp;
+        cin >> tmp;
+        vec.push_back(tmp);
+    }
+    
+    for ( auto& s : vec)
+    {
+        if (s.size() <= 10) {
+         cout << s << endl;
+         continue;
+        } 
+        
+        int len = s.size() - 2;
+        
+        cout << s.front() << len << s.back() << endl;
+    }
+    return 0;
+}
